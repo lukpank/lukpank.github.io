@@ -1,0 +1,66 @@
+body {
+    background-color: white;
+}
+
+h1 {
+    font-family: "DejaVu Serif Condensed", serif;
+    font-size: 150%;
+}
+
+h2 {
+    font-family: "DejaVu Serif Condensed", serif;
+    font-size: 120%;
+}
+
+code {
+    font-family: Inconsolata, monospace;
+}
+
+:not(pre) > code {
+    background-color: #FFFFDD;
+    border: solid 1px #cdc8b1;
+    border-radius: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+pre {
+    background-color: #FFFFDD;
+    border: solid 1px #cdc8b1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 1em;
+    font-family: Inconsolata, monospace;
+}
+
+
+/* These faces comes from professional-theme
+   (http://emacsthemes.caisah.info/professional-theme/) and are
+   exported to CSS using htmlize (http://melpa.org/#/htmlize) 
+*/
+
+.comment {
+    /* font-lock-comment-face */
+    color: #5180B3;
+}
+.comment-delimiter {
+    /* font-lock-comment-delimiter-face */
+    color: #5180B3;
+}
+.constant {
+    /* font-lock-constant-face */
+    color: #9933FF;
+}
+.function-name {
+    /* font-lock-function-name-face */
+    color: #6600FF;
+}
+.keyword {
+    /* font-lock-keyword-face */
+    color: #0000C8;
+}
+.string {
+    /* font-lock-string-face */
+    color: #006600;
+}
+

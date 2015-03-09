@@ -1,5 +1,141 @@
+<!DOCTYPE html>
 <html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Lupan&#39;s webpage</title>
+<link type="text/css" rel="stylesheet" href="style.css">
+</head>
 <body>
-Lupan page
+<h1>Useful programs</h1>
+<h2>Text editors</h2>
+<ul>
+<li><a href="http://www.gnu.org/software/emacs/">GNU Emacs</a> -- the universal text editor</li>
+<li><a href="https://github.com/nsf/godit">godit</a> -- mini Emacs-like editor with UTF-8 support (written in <a href="http://golang.org/">Go</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Mg_%28editor%29">mg</a> -- mini Emacs-like editor without UTF-8 support (available in Debian package <code>mg</code>)</li>
+</ul>
+<h2>GUI programs</h2>
+<ul>
+<li><a href="http://dwm.suckless.org/">dwm</a> -- dynamic window manager for X</li>
+<li><a href="http://st.suckless.org/">st</a> -- simple terminal for X</li>
+<li><a href="http://tools.suckless.org/slock/">slock</a> -- simple X display locker</li>
+</ul>
+<h2>Other programs</h2>
+<ul>
+<li><a href="http://debian.org">Debian</a> -- a universal operating sytem</li>
+<li><a href="http://git-scm.com/">git</a> -- distributed version control
+system. Comes with gitk GUI (see
+<a href="http://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/">Use gitk to understand git</a>
+also look at
+<a href="https://github.com/magit/magit#its-magit--an-emacs-mode-for-git">magit</a>
+a <a href="http://www.gnu.org/software/emacs/">GNU Emacs</a> interface for git)</li>
+<li><a href="https://www.docker.com/">Docker</a> -- powerful and easy containers (like lightweight virtual machines; the <code>docker</code> tool is written in <a href="http://golang.org/">Go</a>)</li>
+<li><a href="https://github.com/nf/webfront/">webfront</a> -- HTTP server and reverse proxy (written in <a href="http://golang.org/">Go</a>)</li>
+</ul>
+<h2>Go (golang) programming language</h2>
+<ul>
+<li><a href="http://golang.org/">Go</a> -- the Go programming language</li>
+<li><a href="http://tour.golang.org/">Tour</a> -- interactive Go tour (write and execute examples in your browser)</li>
+<li><a href="http://golang.org/doc/">Doc</a> -- Go documentation</li>
+<li><a href="http://golang.org/pkg/">Pkg</a> -- Go standard's library documentation</li>
+<li><a href="http://godoc.org/">GoDoc</a> -- documentation of third party Go packages</li>
+<li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports">goimports</a> -- automatically adds import statements for used
+identifiers, also does
+<a href="http://blog.golang.org/go-fmt-your-code">gofmt formatting</a> of your
+code, Emacs's <a href="https://github.com/dominikh/go-mode.el">go-mode</a> may be configured to run goimports on save</li>
+<li><a href="http://localhost:6060/pkg/bufio/#example_Scanner_lines">Reading from io.Reader line by line</a></li>
+</ul>
+<h1>Configuration of Emacs editor</h1>
+<h2>Add MELPA package list</h2>
+<p>You can install many Emacs packages from <a href="http://melpa.org">MELPA</a>
+repository. To add MELPA to the package list add the following to your
+<code>~/.emacs</code> file</p>
+    <pre>
+(<span class="keyword">require</span> '<span class="constant">package</span>)
+(add-to-list 'package-archives
+             '(<span class="string">"melpa"</span> . <span class="string">"http://melpa.org/packages/"</span>) t)
+(package-initialize)
+</pre>
+<p>Now you can list available packages by running <code>M-x list-packages</code>.
+Mark packages you want to install by pressing <code>i</code> and later press <code>x</code>
+to install all marked packages (the necessary dependencies will be
+installed automatically).</p>
+<h2>Interesting Emacs packages available from MELPA</h2>
+<ul>
+<li><a href="http://melpa.org/#/magit">magit</a> -- manage git repository from
+Emacs, especially interactive
+<a href="https://magit.github.io/magit.html#Rewriting">rewriting</a> of the
+history is made easy and
+<a href="https://magit.github.io/magit.html#Staging-and-Committing">staging and committing</a>
+individual chunks (fragments) of files is also handy</li>
+<li><a href="http://melpa.org/#/go-mode">go-mode</a> -- <a href="http://golang.org/">Go</a> editing mode</li>
+<li><a href="http://melpa.org/#/go-autocomplete">go-autocomplete</a> -- autocompletion for Go identifiers</li>
+<li><a href="http://melpa.org/#/go-eldoc">go-eldoc</a> -- <a href="http://emacswiki.org/emacs/ElDoc">eldoc</a> support for Go code</li>
+<li><a href="http://melpa.org/#/markdown-mode">markdown-mode</a> -- <a href="http://daringfireball.net/projects/markdown/">Markdown</a> editing mode (see also <a href="http://commonmark.org/">CommonMark</a>)</li>
+<li><a href="http://melpa.org/#/professional-theme">professional-theme</a> -- Emacs port of Vim's <a href="http://emacsthemes.caisah.info/professional-theme/">professional theme</a> (see also <a href="http://emacsthemes.caisah.info/">other Emacs themes</a>)</li>
+<li><a href="http://melpa.org/#/htmlize">htmlize</a> -- convert Emacs buffer or a file to HTML with the same syntax highlighting</li>
+</ul>
+<h2>Using Go under Emacs</h2>
+<p>I use the following setup for the <a href="https://github.com/dominikh/go-mode.el">go-mode</a> in my <code>~/.emacs</code>. This
+adds syntax highlighting but without fontifing names of called
+functions, autocompletion and <a href="http://emacswiki.org/emacs/ElDoc">eldoc</a> support, auto formatting of the
+code on save with adding of missing imports (<a href="https://godoc.org/golang.org/x/tools/cmd/goimports">goimports</a>).</p>
+    <pre>
+(setq gofmt-command <span class="string">"goimports"</span>     <span class="comment-delimiter">; </span><span class="comment">use goimports instead of gofmt
+</span>      go-fontify-function-calls nil) <span class="comment-delimiter">; </span><span class="comment">fontifing names of called functions is too much
+</span>
+(<span class="keyword">when</span> (<span class="keyword">require</span> '<span class="constant">go-mode</span> nil t)
+  <span class="comment-delimiter">;; </span><span class="comment">run gofmt/goimports when saving the file
+</span>  (add-hook 'before-save-hook 'gofmt-before-save))
+
+(<span class="keyword">defun</span> <span class="function-name">my-go-mode-hook-fn</span> ()
+  (local-set-key (kbd <span class="string">"M-."</span>) 'godef-jump)
+  (local-set-key <span class="string">"\C-cd"</span> 'godoc-at-point)
+  (go-eldoc-setup))
+(add-hook 'go-mode-hook 'my-go-mode-hook-fn)
+
+(and (<span class="keyword">require</span> '<span class="constant">auto-complete</span> nil t)
+     (<span class="keyword">require</span> '<span class="constant">go-autocomplete</span> nil t)
+     (<span class="keyword">require</span> '<span class="constant">auto-complete-config</span> nil t)
+     (add-hook 'go-mode-hook 'auto-complete-mode))
+</pre>
+<p>Now, in go buffers you can use <code>C-c C-j</code> (or <code>M-.</code>) to jump to the
+definition of the identifier at point (use <code>M-*</code> to jump back as for
+normal tags) and you can also use <code>C-c C-d</code> for a short description of
+the identifier at point (actually it is constantly displayed in the
+mode line by enabled Go <a href="http://emacswiki.org/emacs/ElDoc">eldoc</a> support). You can use <code>C-c d</code> for a
+longer description of the identifier at point.</p>
+<p>For this to work you have to</p>
+<ol>
+<li>
+<p>Install Go compiler. Under Debian you install <code>golang-go</code> package
+(but in Debian 7 wheezy it is 1.0.2 compared to the current 1.4.2,
+so you may consider downloading the newer version). Otherwise
+search for the package for your system or otherwise see
+<a href="http://golang.org/doc/install">Getting started</a>.</p>
+</li>
+<li>
+<p>Install <a href="http://godoc.org/code.google.com/p/rog-go/exp/cmd/godef">godef</a>
+can be installed with</p>
+<pre><code>$ go get code.google.com/p/rog-go/exp/cmd/godef
+</code></pre>
+</li>
+<li>
+<p>Install <a href="https://godoc.org/golang.org/x/tools/cmd/goimports">goimports</a> can be installed from Debian package
+<code>golang-go.tools</code> or with</p>
+<pre><code>$ go get golang.org/x/tools/cmd/goimports
+</code></pre>
+</li>
+<li>
+<p>Add your <code>$GOPATH/bin</code> to your <code>PATH</code> environment variable or copy
+the <code>godef</code> and <code>goimports</code> executables from <code>$GOPATH/bin</code> to some
+directory which is in your <code>PATH</code>.</p>
+</li>
+</ol>
+<p>See also
+<a href="http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/">Writing Go in Emacs</a>
+for more info.</p>
+
+<h1>See also</h1>
+<p>A more up to date version of this page may be available at <a href="http://lupan.ddns.net/">lupan.ddns.net</a>.</p>
 </body>
 </html>
