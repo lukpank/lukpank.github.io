@@ -1,15 +1,19 @@
 body {
-    background-color: white;
+    background-color: #f9fbfd;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 h1 {
     font-family: "DejaVu Serif Condensed", serif;
     font-size: 150%;
+    font-weight: bold;
 }
 
 h2 {
     font-family: "DejaVu Serif Condensed", serif;
     font-size: 120%;
+    font-weight: bold;
 }
 
 code {
@@ -63,4 +67,3 @@ pre {
     /* font-lock-string-face */
     color: #006600;
 }
-
