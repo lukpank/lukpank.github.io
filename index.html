@@ -6,68 +6,174 @@
 <link type="text/css" rel="stylesheet" href="style.css">
 </head>
 <body>
+<nav>
+
+
+<li><a href="#useful-programs">Useful programs</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#text-editors">Text editors</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#gui-programs">GUI programs</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#other-programs">Other programs</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#go-golang-programming-language">Go (golang) programming language</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#learning-go">Learning Go</a></li>
+
+<li><a href="#configuration-of-emacs-editor">Configuration of Emacs editor</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#add-melpa-package-list">Add MELPA package list</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#interesting-emacs-packages-available-from-melpa">Interesting Emacs packages available from MELPA</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#using-go-under-emacs">Using Go under Emacs</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#using-python-under-emacs">Using Python under Emacs</a></li>
+
+<li>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#using-cc-under-emacs">Using C/C&#43;&#43; under Emacs</a></li>
+
+<li><a href="#crosscompiliation-of-go-programs">Cross-compiliation of Go programs</a></li>
+
+<li><a href="#see-also">See also</a></li>
+
+</ul>
+</nav>
+<div id="content">
 <h1 id="useful-programs">Useful programs</h1>
 <h2 id="text-editors">Text editors</h2>
 <ul>
-<li><a href="http://www.gnu.org/software/emacs/">GNU Emacs</a> -- the universal text editor</li>
-<li><a href="https://github.com/nsf/godit">godit</a> -- mini Emacs-like editor with UTF-8 support (written in <a href="http://golang.org/">Go</a>)</li>
-<li><a href="http://en.wikipedia.org/wiki/Mg_%28editor%29">mg</a> -- mini Emacs-like editor without UTF-8 support (available in Debian package <code>mg</code>)</li>
+<li><a href="http://www.gnu.org/software/emacs/">GNU Emacs</a> – the universal text editor</li>
+<li><a href="https://github.com/nsf/godit">godit</a> – mini Emacs-like editor with UTF-8 support (written in <a href="https://golang.org/">Go</a>)</li>
+<li><a href="http://en.wikipedia.org/wiki/Mg_(editor)">mg</a> – mini Emacs-like editor without UTF-8 support (available in Debian package <code>mg</code>)</li>
 </ul>
 <h2 id="gui-programs">GUI programs</h2>
 <ul>
-<li><a href="http://dwm.suckless.org/">dwm</a> -- dynamic window manager for X</li>
-<li><a href="http://st.suckless.org/">st</a> -- simple terminal for X</li>
-<li><a href="http://tools.suckless.org/slock/">slock</a> -- simple X display locker</li>
+<li><a href="http://dwm.suckless.org/">dwm</a> – dynamic window manager for X</li>
+<li><a href="http://st.suckless.org/">st</a> – simple terminal for X</li>
+<li><a href="http://tools.suckless.org/slock/">slock</a> – simple X display locker</li>
 </ul>
 <h2 id="other-programs">Other programs</h2>
 <ul>
-<li><a href="http://debian.org">Debian</a> -- a universal operating sytem</li>
-<li><a href="http://git-scm.com/">git</a> -- distributed version control
+<li><a href="http://debian.org">Debian</a> – a universal operating system</li>
+<li><a href="http://git-scm.com/">git</a> – distributed version control
 system. Comes with gitk GUI (see
 <a href="http://lostechies.com/joshuaflanagan/2010/09/03/use-gitk-to-understand-git/">Use gitk to understand git</a>
 also look at
 <a href="https://github.com/magit/magit#its-magit">magit</a>
 a <a href="http://www.gnu.org/software/emacs/">GNU Emacs</a> interface for git)</li>
-<li><a href="https://www.docker.com/">Docker</a> -- powerful and easy containers (like lightweight virtual machines; the <code>docker</code> tool is written in <a href="http://golang.org/">Go</a>)</li>
-<li><a href="https://github.com/nf/webfront/">webfront</a> -- HTTP server and reverse proxy (written in <a href="http://golang.org/">Go</a>)</li>
-<li><a href="https://github.com/hanwen/go-mtpfs/">go-mtpfs</a> -- mounting Android
-devices as MTP device (written in <a href="http://golang.org/">Go</a>). This was the only such tool
+<li><a href="https://www.docker.com/">Docker</a> – powerful and easy containers (like lightweight virtual machines; the <code>docker</code> tool is written in <a href="https://golang.org/">Go</a>)</li>
+<li><a href="https://github.com/nf/webfront/">webfront</a> – HTTP server and reverse proxy (written in <a href="https://golang.org/">Go</a>)</li>
+<li><a href="https://github.com/hanwen/go-mtpfs/">go-mtpfs</a> – mounting Android
+devices as MTP device (written in <a href="https://golang.org/">Go</a>). This was the only such tool
 that worked for me without problems (when I had to choose one).</li>
-<li><a href="https://tmux.github.io/">tmux</a> -- a terminal multiplexer</li>
+<li><a href="https://tmux.github.io/">tmux</a> – a terminal multiplexer</li>
 </ul>
 <h2 id="go-golang-programming-language">Go (golang) programming language</h2>
 <ul>
-<li><a href="http://golang.org/">Go</a> -- the Go programming language</li>
-<li><a href="http://tour.golang.org/">Tour</a> -- interactive Go tour (write and execute examples in your browser)</li>
-<li><a href="http://golang.org/doc/">Doc</a> -- Go documentation</li>
-<li><a href="http://golang.org/pkg/">Pkg</a> -- Go standard's library documentation</li>
-<li><a href="http://godoc.org/">GoDoc</a> -- documentation of third party Go packages</li>
-<li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports">goimports</a> -- automatically adds import statements for used
+<li><a href="https://golang.org/">Go</a> – the Go programming language</li>
+<li>see <a href="#learning-go">Learning Go</a> below</li>
+<li><a href="https://tour.golang.org/">Tour</a> – interactive Go tour (write and execute examples in your browser)</li>
+<li><a href="https://golang.org/doc/">Doc</a> – Go documentation</li>
+<li><a href="https://golang.org/pkg/">Pkg</a> – Go standard’s library documentation</li>
+<li><a href="https://godoc.org/">GoDoc</a> – documentation of third party Go packages</li>
+<li><a href="https://godoc.org/golang.org/x/tools/cmd/goimports">goimports</a> – automatically adds import statements for used
 identifiers, also does
-<a href="http://blog.golang.org/go-fmt-your-code">gofmt formatting</a> of your
-code, Emacs's <a href="https://github.com/dominikh/go-mode.el">go-mode</a> may be configured to run goimports on save</li>
-<li><a href="http://golang.org/s/oracle-user-manual">go oracle</a> -- answers questions about Go programs</li>
-<li><a href="http://golang.org/pkg/bufio/#example_Scanner_lines">Reading from io.Reader line by line</a></li>
+<a href="https://blog.golang.org/go-fmt-your-code">gofmt formatting</a> of your
+code, Emacs’s <a href="https://github.com/dominikh/go-mode.el">go-mode</a> may be configured to run goimports on save</li>
+<li><a href="https://godoc.org/golang.org/x/tools/cmd/guru">go guru</a> – answers questions about Go programs by static analysis
+of the source code (see also
+<a href="https://golang.org/s/oracle-user-manual">user manual</a> under its
+previous name and its Emacs package <a href="https://melpa.org/#/go-guru">go-guru</a>)</li>
+<li><a href="https://golang.org/pkg/bufio/#example_Scanner_lines">Reading from io.Reader line by line</a></li>
 <li><a href="#using-go-under-emacs">Using Go under Emacs</a></li>
+<li><a href="https://godoc.org/golang.org/x/tools/cmd/gotype">gotype</a> – does
+semantic analysis of a Go program and displays errors (runs faster
+then the go compiler)</li>
+<li><a href="https://speakerdeck.com/farslan/tools-for-working-with-go-code">Tools for working with Go Code</a></li>
+<li><a href="https://github.com/motemen/gore">gore</a> – Yet another Go REPL (useful for short experiments with Go)</li>
+<li><a href="https://melpa.org/#/go-playground">go-playground</a> – local Go playground in Emacs</li>
+</ul>
+<h2 id="learning-go">Learning Go</h2>
+<p>Introduction</p>
+<ul>
+<li>to search for Go use “golang” term instead of Go (as in the name of the official <a href="https://golang.org/">Go webpage</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=MzYZhh6gpI0">Russ Cox – A Tour of the Go Programming Language</a>
+(suggested on <a href="https://golang.org/doc/">Go documentation</a> page)</li>
+<li><a href="https://tour.golang.org">A Tour of Go</a> – interactive tutorial which allows you to edit compile and run examples in the browser</li>
+<li><a href="https://golang.org/doc/code.html">How to Write Go Code</a></li>
+<li><a href="https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins">IDEs and Plugins for Go</a>. Examples:
+open source <a href="https://github.com/visualfc/liteide">LiteIDE</a>,
+<a href="http://lupan.ddns.net/#using-go-under-emacs">using Go under Emacs</a>.</li>
+</ul>
+<p>Videos (with links to slides)</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=rFejpH_tAHM">dotGo 2015 – Rob Pike – Simplicity is Complicated</a>
+[<a href="http://talks.golang.org/2015/simplicity-is-complicated.slide">slides</a>] – one of three original authors of Go</li>
+<li><a href="https://vimeo.com/53221560">Øredev Conference 2012 – Andrew Gerrand – Code that grows with grace</a>
+[<a href="http://talks.golang.org/2012/chat.slide">slides</a>]
+(suggested on <a href="https://golang.org/doc/">Go documentation</a> page)</li>
+<li><a href="https://www.youtube.com/watch?v=f6kdp27TYZs">Google I/O 2012 – Rob Pike – Go Concurrency Patterns</a>
+[<a href="http://talks.golang.org/2012/concurrency.slide">slides</a>] – one of three original authors of Go
+(suggested on <a href="https://golang.org/doc/">Go documentation</a> page)</li>
+<li><a href="https://www.youtube.com/watch?v=QDDwwePbDtw">Google I/O 2013 – Samerr Ajmani – Advanced Go Concurrency Patterns</a>
+[<a href="http://talks.golang.org/2013/advconc.slide">slides</a>]
+(suggested on <a href="https://golang.org/doc/">Go documentation</a> page)</li>
+<li><a href="https://www.youtube.com/watch?v=LJvEIjRBSDA">Write in Go (Fall 2014)</a></li>
+<li><a href="https://www.youtube.com/watch?v=0ReKdcpNyQg">GopherCon 2015 – Robert Griesemer - The Evolution of Go</a>
+[<a href="http://talks.golang.org/2015/gophercon-goevolution.slide">slides</a>] – one of three original authors of Go</li>
+<li><a href="https://www.youtube.com/watch?v=8D3Vmm1BGoY">Twelve Go Best Practices - Francesc Campoy</a>
+[<a href="http://talks.golang.org/2013/bestpractices.slide">slides</a>]</li>
+<li><a href="https://www.youtube.com/watch?v=ndmB0bj7eyw">golang-syd in July 2014 – Andrew Gerrand – Testing techniques</a>
+[<a href="https://talks.golang.org/2014/testing.slide">slides</a>]</li>
+<li><a href="https://www.youtube.com/watch?v=YPQ-aFjJX5Q">GopherCon 2014 – Richard Crowley – Building web services in Go</a>
+[<a href="https://rcrowley.org/talks/gophercon-2014.html">slides</a>]</li>
+<li><a href="https://www.youtube.com/watch?v=4Dr8FXs9aJM">Gophercon India 2016 – Brad Fitzpatrick – Introducing Go 1.6: asymptotically approaching boring</a>
+[<a href="https://docs.google.com/presentation/d/1JsCKdK_AvDdn8EkummMNvpo7ntqteWQfynq9hFTCkhQ/view?pref=2&amp;pli=1#slide=id.p">slides</a>]</li>
+</ul>
+<p>Articles</p>
+<ul>
+<li><a href="http://blog.golang.org/go-slices-usage-and-internals">Go Slices: usage and internals</a></li>
+<li><a href="https://github.com/golang/go/wiki/SliceTricks">SliceTricks</a></li>
+<li><a href="http://blog.golang.org/strings">Strings, bytes, runes and characters in Go</a></li>
+<li><a href="http://blog.golang.org/go-maps-in-action">Go maps in action</a></li>
+<li><a href="http://blog.golang.org/godoc-documenting-go-code">Godoc: documenting Go code</a></li>
+<li><a href="https://golang.org/doc/effective_go.html">Effective Go</a></li>
+<li><a href="http://blog.golang.org/errors-are-values">Errors are values</a></li>
+<li><a href="http://blog.golang.org/package-names">Package names</a></li>
+<li><a href="https://golang.org/pkg/bufio/#example_Scanner_lines">Reading from io.Reader line by line</a></li>
+<li><a href="http://go-database-sql.org/index.html">Go database/sql tutorial</a></li>
+</ul>
+<p>See also</p>
+<ul>
+<li><a href="#go-golang-programming-language">Go language links</a> above</li>
 </ul>
 <h1 id="configuration-of-emacs-editor">Configuration of Emacs editor</h1>
 <h2 id="add-melpa-package-list">Add MELPA package list</h2>
-<p>You can install many Emacs packages from <a href="http://melpa.org">MELPA</a>
+<p>You can install many Emacs packages from <a href="https://melpa.org">MELPA</a>
 repository. To add MELPA to the package list add the following to your
 <code>~/.emacs</code> file</p>
     <pre>
 (<span class="keyword">require</span> '<span class="constant">package</span>)
-(add-to-list 'package-archives
-             '(<span class="string">"melpa"</span> . <span class="string">"http://melpa.org/packages/"</span>) t)
-(package-initialize)
+(<span class="keyword">setq</span> package-archives
+      '((<span class="string">"gnu"</span> . <span class="string">"https://elpa.gnu.org/packages/"</span>)
+        (<span class="string">"melpa"</span> . <span class="string">"https://melpa.org/packages/"</span>))
+      tls-checktrust t
+      tls-program '(<span class="string">"gnutls-cli --x509cafile %t -p %p %h"</span>)
+      gnutls-verify-error t)
 </pre>
+<p>This also turns on checking TLS certificates (in both possible modes)
+with <code>tls-program</code> set to only the first value from the default value
+(for more info
+see
+<a href="https://glyph.twistedmatrix.com/2015/11/editor-malware.html">Your Text Editor Is Malware</a>).</p>
 <p>Now you can list available packages by running <code>M-x list-packages</code>.
 Mark packages you want to install by pressing <code>i</code> and later press <code>x</code>
 to install all marked packages (the necessary dependencies will be
 installed automatically).</p>
 <h2 id="interesting-emacs-packages-available-from-melpa">Interesting Emacs packages available from MELPA</h2>
 <ul>
-<li><a href="http://melpa.org/#/magit">magit</a> -- manage git repository from
+<li><a href="https://melpa.org/#/magit">magit</a> – manage git repository from
 Emacs, especially interactive
 <a href="http://magit.vc/manual/magit/Rebasing.html#Rebasing">rewriting</a> of
 the history is made easy and
@@ -75,36 +181,73 @@ the history is made easy and
 and
 <a href="http://magit.vc/manual/magit/Committing.html#Committing">committing</a>
 individual chunks (fragments) of files is also handy</li>
-<li><a href="http://melpa.org/#/go-mode">go-mode</a> -- <a href="http://golang.org/">Go</a> editing mode</li>
-<li><a href="http://melpa.org/#/go-autocomplete">go-autocomplete</a> -- autocompletion for Go identifiers</li>
-<li><a href="http://melpa.org/#/go-eldoc">go-eldoc</a> -- <a href="http://emacswiki.org/emacs/ElDoc">eldoc</a> support for Go code</li>
-<li><a href="http://melpa.org/#/markdown-mode">markdown-mode</a> -- <a href="http://daringfireball.net/projects/markdown/">Markdown</a> editing mode (see also <a href="http://commonmark.org/">CommonMark</a>)</li>
-<li><a href="http://melpa.org/#/professional-theme">professional-theme</a> -- Emacs port of Vim's <a href="http://emacsthemes.com/themes/professional-theme.html">professional theme</a> (see also <a href="http://emacsthemes.com/">other Emacs themes</a>)</li>
-<li><a href="http://melpa.org/#/htmlize">htmlize</a> -- convert Emacs buffer or a file to HTML with the same syntax highlighting</li>
+<li><a href="https://melpa.org/#/go-mode">go-mode</a> – <a href="https://golang.org/">Go</a> editing mode</li>
+<li><a href="https://melpa.org/#/company-go">company-go</a> – autocompletion for Go identifiers (the alternative is <a href="https://melpa.org/#/go-autocomplete">go-autocomplete</a>)</li>
+<li><a href="https://melpa.org/#/go-eldoc">go-eldoc</a> – <a href="http://emacswiki.org/emacs/ElDoc">eldoc</a> support for Go code</li>
+<li><a href="https://melpa.org/#/markdown-mode">markdown-mode</a> – <a href="http://daringfireball.net/projects/markdown/">Markdown</a> editing mode (see also <a href="http://commonmark.org/">CommonMark</a>)</li>
+<li><a href="https://melpa.org/#/leuven-theme">leuven-theme</a> – an Emacs theme with a light background
+(<a href="https://emacsthemes.com/themes/leuven-theme.html">see screenshots</a>)</li>
+<li><a href="https://melpa.org/#/white-sand-theme">white-sand-theme</a> – an Emacs theme with a light background
+(<a href="https://emacsthemes.com/themes/white-sand-theme.html">see screenshots</a>)</li>
+<li><a href="https://github.com/mswift42/greymatters-theme">greymatters-theme</a> – an Emacs theme with a light background
+(<a href="https://emacsthemes.com/themes/greymatters-theme.html">see screenshots</a>)</li>
+<li><a href="https://melpa.org/#/professional-theme">professional-theme</a> – Emacs port of Vim’s <a href="http://emacsthemes.com/themes/professional-theme.html">professional theme</a> (see also <a href="http://emacsthemes.com/">other Emacs themes</a>)</li>
+<li><a href="https://melpa.org/#/htmlize">htmlize</a> – convert Emacs buffer or a file to HTML with the same syntax highlighting</li>
+<li><a href="https://melpa.org/#/go-playground">go-playground</a> – local Go playground in Emacs</li>
+<li><a href="https://melpa.org/#/go-guru">go-guru</a> – use Go ‘guru’ static analysis in Emacs</li>
 </ul>
 <h2 id="using-go-under-emacs">Using Go under Emacs</h2>
 <p>I use the following setup for the <a href="https://github.com/dominikh/go-mode.el">go-mode</a> in my <code>~/.emacs</code>. This
 adds syntax highlighting but without fontifing names of called
 functions, autocompletion and <a href="http://emacswiki.org/emacs/ElDoc">eldoc</a> support, auto formatting of the
 code on save with adding of missing imports (<a href="https://godoc.org/golang.org/x/tools/cmd/goimports">goimports</a>).</p>
+<p>It is quite long as I define two functions: one
+(<code>my-indent-or-complete</code>) which is bind to <code>TAB</code> key and (contextually)
+either completes the symbol at point or indents the line, the other one
+(<code>my-go-electric-brace</code>) is bind to <code>{</code> key and inserts an indented
+pair of braces (if previous character is a space, otherwise it inserts
+single opening brace).</p>
     <pre>
-(setq gofmt-command <span class="string">"goimports"</span>     <span class="comment-delimiter">; </span><span class="comment">use goimports instead of gofmt
-</span>      go-fontify-function-calls nil) <span class="comment-delimiter">; </span><span class="comment">fontifing names of called functions is too much
-</span>
+(<span class="keyword">setq</span> gofmt-command <span class="string">"goimports"</span>     <span class="comment-delimiter">; </span><span class="comment">use goimports instead of gofmt
+</span>      go-fontify-function-calls nil <span class="comment-delimiter">; </span><span class="comment">fontifing names of called functions is too much for me
+</span>      company-idle-delay nil)
+
 (<span class="keyword">when</span> (<span class="keyword">require</span> '<span class="constant">go-mode</span> nil t)
   <span class="comment-delimiter">;; </span><span class="comment">run gofmt/goimports when saving the file
 </span>  (add-hook 'before-save-hook 'gofmt-before-save))
 
-(<span class="keyword">defun</span> <span class="function-name">my-go-mode-hook-fn</span> ()
-  (local-set-key (kbd <span class="string">"M-."</span>) 'godef-jump)
-  (local-set-key <span class="string">"\C-cd"</span> 'godoc-at-point)
-  (go-eldoc-setup))
-(add-hook 'go-mode-hook 'my-go-mode-hook-fn)
+(<span class="keyword">defun</span> <span class="function-name">my-indent-or-complete</span> ()
+  (<span class="keyword">interactive</span>)
+  (<span class="keyword">if</span> (<span class="keyword">or</span> (looking-at <span class="string">"\\w"</span>)
+      (looking-back <span class="string">"^</span><span class="string"><span class="regexp-grouping-backslash">\\</span></span><span class="string"><span class="regexp-grouping-construct">|</span></span><span class="string">\s"</span>))
+      (indent-for-tab-command)
+    (company-complete)))
 
-(and (<span class="keyword">require</span> '<span class="constant">auto-complete</span> nil t)
-     (<span class="keyword">require</span> '<span class="constant">go-autocomplete</span> nil t)
-     (<span class="keyword">require</span> '<span class="constant">auto-complete-config</span> nil t)
-     (add-hook 'go-mode-hook 'auto-complete-mode))
+(<span class="keyword">defun</span> <span class="function-name">my-go-electric-brace</span> ()
+  (<span class="keyword">interactive</span>)
+  (<span class="keyword">if</span> (not (looking-back <span class="string">" "</span>))
+      (insert <span class="string">"{"</span>)
+    (insert <span class="string">"{"</span>)
+    (newline)
+    (indent-according-to-mode)
+    (<span class="keyword">save-excursion</span>
+      (newline)
+      (insert <span class="string">"}"</span>)
+      (indent-according-to-mode))))
+
+(<span class="keyword">defun</span> <span class="function-name">my-go-mode-hook-fn</span> ()
+  (go-eldoc-setup)
+  (set (make-local-variable 'company-backends) '(company-go))
+  (company-mode)
+  (abbrev-mode 1)
+  (local-set-key (kbd <span class="string">"M-."</span>) 'go-guru-definition) <span class="comment-delimiter">; </span><span class="comment">may also use godef-jump
+</span>  (local-set-key <span class="string">"\C-cd"</span> 'godoc-at-point)
+  (local-set-key <span class="string">"\C-cg"</span> 'godoc)
+  (local-set-key <span class="string">"\C-ch"</span> 'go-guru-hl-identifier)
+  (local-set-key <span class="string">"\C-i"</span> 'my-indent-or-complete)
+  (local-set-key <span class="string">"{"</span> 'my-go-electric-brace))
+
+(add-hook 'go-mode-hook 'my-go-mode-hook-fn)
 </pre>
 <p>Now, in go buffers you can use <code>C-c C-j</code> (or <code>M-.</code>) to jump to the
 definition of the identifier at point (use <code>M-*</code> to jump back as for
@@ -116,17 +259,18 @@ longer description of the identifier at point.</p>
 <ol>
 <li>
 <p>Install <a href="#add-melpa-package-list">from MELPA</a> the following Emacs
-packages: <a href="https://github.com/dominikh/go-mode.el">go-mode</a>, <a href="http://melpa.org/#/go-autocomplete">go-autocomplete</a>, and <a href="http://melpa.org/#/go-eldoc">go-eldoc</a>.</p>
+packages: <a href="https://github.com/dominikh/go-mode.el">go-mode</a>, <a href="https://melpa.org/#/company-go">company-go</a>, <a href="https://melpa.org/#/go-eldoc">go-eldoc</a>, and <a href="https://melpa.org/#/go-guru">go-guru</a>.</p>
 </li>
 <li>
 <p>Install Go compiler. Under Debian you install <code>golang-go</code> package
-(but in Debian 7 wheezy it is 1.0.2 compared to the current 1.4.2,
-so you may consider downloading the newer version). Otherwise
+(but in Debian 8 Jessie it is 1.3.3 compared to the current 1.7.3,
+so you may consider
+<a href="https://golang.org/dl/">downloading the current version of Go</a>). Otherwise
 search for the package for your system or otherwise see
-<a href="http://golang.org/doc/install">Getting started</a>.</p>
+<a href="https://golang.org/doc/install">Getting started</a>.</p>
 </li>
 <li>
-<p>Install <a href="http://godoc.org/github.com/rogpeppe/godef">godef</a>
+<p>Install <a href="https://godoc.org/github.com/rogpeppe/godef">godef</a>
 can be installed with</p>
 <pre><code>$ go get github.com/rogpeppe/godef
 </code></pre>
@@ -144,16 +288,173 @@ installed from Debian package <code>gocode</code> or with</p>
 </code></pre>
 </li>
 <li>
-<p>Add your <code>$GOPATH/bin</code> to your <code>PATH</code> environment variable or copy
-the <code>godef</code>, <code>goimports</code>, and <code>gocode</code> executables from
-<code>$GOPATH/bin</code> to some directory which is in your <code>PATH</code>.</p>
+<p>Install <a href="https://godoc.org/golang.org/x/tools/cmd/guru">go guru</a> with</p>
+<pre><code>$ go get golang.org/x/tools/cmd/guru
+</code></pre>
+</li>
+<li>
+<p>Add your <code>$GOPATH/bin</code> to your <code>PATH</code> environment variable (or copy
+the <code>godef</code>, <code>goimports</code>, <code>gocode</code>, and <code>guru</code> executables from
+<code>$GOPATH/bin</code> to some directory which is in your <code>PATH</code>).</p>
 </li>
 </ol>
-<p>See also <a href="http://golang.org/s/oracle-user-manual">go oracle</a> for installation and usage instructions and
+<p>See also
 <a href="http://dominik.honnef.co/posts/2013/03/writing_go_in_emacs/">Writing Go in Emacs</a>
 for more info.</p>
+<h2 id="using-python-under-emacs">Using Python under Emacs</h2>
+<p>Install <a href="https://melpa.org/#/company-jedi">company-jedi</a> from MELPA.
+Add the following to your <code>~/.emacs</code> file:</p>
+    <pre>
+(<span class="keyword">defun</span> <span class="function-name">my-python-mode-hook-fn</span> ()
+  (jedi:setup)
+  (set (make-local-variable 'company-backends) '(company-jedi))
+  (company-mode)
+  (abbrev-mode 1)
+  (local-set-key (kbd <span class="string">"M-."</span>) 'jedi:goto-definition)
+  (local-set-key (kbd <span class="string">"M-*"</span>) 'jedi:goto-definition-pop-marker)
+  (local-set-key <span class="string">"\C-i"</span> 'my-indent-or-complete))
 
-<h1>See also</h1>
-<p>A more up to date version of this page may be available at <a href="http://lupan.ddns.net/">lupan.ddns.net</a>.</p>
+(add-hook 'python-mode-hook 'my-python-mode-hook-fn)
+</pre>
+<p>Function <code>my-indent-or-complete</code> is defined above in section
+<a href="#using-go-under-emacs">Using Go under Emacs</a>.</p>
+<h2 id="using-cc-under-emacs">Using C/C++ under Emacs</h2>
+<ol>
+<li>
+<p>First install <a href="#add-melpa-package-list">from MELPA</a> Emacs packages
+<a href="https://melpa.org/#/cmake-ide">cmake-ide</a>,
+<a href="https://melpa.org/#/company">company</a>, and
+<a href="https://melpa.org/#/rtags">rtags</a>.  Package <code>cmake-ide</code>
+automatically configures other C++ Emacs packages (here <code>company</code>
+and <code>rtags</code>) when you open a C/C++ file from a project which uses
+<a href="https://cmake.org">cmake</a> to build.</p>
+</li>
+<li>
+<p>Add the following to your <code>~/.emacs</code> file.</p>
+    <pre>
+(set-default 'c-basic-offset 8)
+(<span class="keyword">setq</span> c-default-style '((java-mode . <span class="string">"java"</span>)
+                        (awk-mode . <span class="string">"awk"</span>)
+                        (other . <span class="string">"k&amp;r"</span>))
+      company-async-timeout 5           <span class="comment-delimiter">; </span><span class="comment">completion may be slow
+</span>      rtags-completions-enabled t)
+
+(<span class="keyword">when</span> (<span class="keyword">require</span> '<span class="constant">cmake-ide</span> nil t)
+  (<span class="keyword">require</span> '<span class="constant">subr-x</span>) <span class="comment-delimiter">; </span><span class="comment">a temporary fix
+</span>  (cmake-ide-setup))
+
+(<span class="keyword">when</span> (<span class="keyword">require</span> '<span class="constant">rtags</span> nil t)
+  (rtags-enable-standard-keybindings)) <span class="comment-delimiter">; </span><span class="comment">starts with C-c r
+</span>
+(<span class="keyword">defun</span> <span class="function-name">my-c-c++-mode-hook-fn</span> ()
+  (set (make-local-variable 'company-backends) '(company-rtags))
+  (company-mode)
+  (local-set-key (kbd <span class="string">"M-."</span>) 'rtags-find-symbol-at-point)
+  (local-set-key <span class="string">"\C-i"</span> 'my-indent-or-complete)
+  (local-set-key (kbd <span class="string">"&lt;tab&gt;"</span>) 'my-indent-or-complete)
+  (local-set-key <span class="string">"\C-\M-i"</span> 'my-indent-or-complete))
+
+(add-hook 'c-mode-hook 'my-c-c++-mode-hook-fn)
+(add-hook 'c++-mode-hook 'my-c-c++-mode-hook-fn)
+</pre>
+<p>Function <code>my-indent-or-complete</code> is defined above in section
+<a href="#using-go-under-emacs">Using Go under Emacs</a>.</p>
+</li>
+<li>
+<p>Install <a href="http://clang.llvm.org/">clang</a> compiler or more accurately
+<code>libclang</code> library (package <code>libclang-dev</code> or may be newer
+<code>libclang-X.Y-dev</code> under Debian) which is required by <code>rtags</code>.</p>
+</li>
+<li>
+<p>Install <code>rtags</code> server with (it assumes first that you do have
+<code>llvm-config-3.8</code> instead of <code>llvm-config</code> thus the extra option is
+needed and second that you want to install it in <code>/opt/rtags</code>
+instead of default <code>/usr/local</code>):</p>
+<pre><code>$ git clone --recursive https://github.com/Andersbakken/rtags.git
+$ cd rtags
+$ mkdir build
+$ cd build
+$ cmake -DLIBCLANG_LLVM_CONFIG_EXECUTABLE=llvm-config-3.8 -DCMAKE_INSTALL_PREFIX=/opt/rtags ..
+$ make
+</code></pre>
+<p>And as root</p>
+<pre><code># make install
+# ln -s /opt/rtags/bin/rc /usr/local/bin/rc
+# ln -s /opt/rtags/bin/rdm /usr/local/bin/rdm
+</code></pre>
+</li>
+<li>
+<p>Usefull <code>rtags</code> functions (use <code>C-c r C-h</code> to see these and other key bindings)</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>C-c r .</code></td>
+<td><code>rtags-find-symbol-at-point</code></td>
+</tr>
+<tr>
+<td><code>C-c r [</code></td>
+<td><code>rtags-location-stack-back</code></td>
+</tr>
+<tr>
+<td><code>C-c r ,</code></td>
+<td><code>rtags-find-references-at-point</code></td>
+</tr>
+<tr>
+<td><code>C-c r /</code></td>
+<td><code>rtags-find-all-references-at-point</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>rtags-find-references-current-file</code></td>
+</tr>
+<tr>
+<td></td>
+<td><code>rtags-find-references-current-dir</code></td>
+</tr>
+<tr>
+<td><code>C-c r v</code></td>
+<td><code>rtags-find-virtuals-at-point</code></td>
+</tr>
+<tr>
+<td><code>C-c r ;</code></td>
+<td><code>rtags-find-file</code> (in the current project no metter in which directory)</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<h1 id="crosscompiliation-of-go-programs">Cross-compiliation of Go programs</h1>
+<p>Instead of just builind a program with</p>
+<pre><code>$ go build
+</code></pre>
+<p>in the package directory. To cross-compile a pure Go program to run on a Raspberry Pi 2 machine running Linux run</p>
+<pre><code>$ GOOS=linux GOARCH=arm GOARM=7 go build
+</code></pre>
+<p>To cross-compile a Go program to run on a Raspberry Pi 2 machine running Linux but for the program involving <a href="https://golang.org/cmd/cgo/">CGO</a>
+run</p>
+<pre><code>$ GOOS=linux GOARCH=arm GOARM=7 CGO_ENABLED=1 CC=arm-linux-gnueabi-gcc go build
+</code></pre>
+<p>For the above command to work you need (on Debian) to install
+<code>gcc-arm-linux-gnueabi</code>.</p>
+<p>While to cross-compile from an amd64 machine running Linux to the corresponding 32-bit i386 machine running Linux run</p>
+<pre><code>$ GOOS=linux GOARCH=386 go build
+</code></pre>
+<p>for the same cross-compilation but for the program involving <a href="https://golang.org/cmd/cgo/">CGO</a>
+run</p>
+<pre><code>$ GOOS=linux GOARCH=386 CGO_ENABLED=1 go build
+</code></pre>
+<p>For the above command to work you need (on Debian) to install
+<code>gcc-multilib</code> (or if needed also <code>g++-multilib</code>).</p>
+
+<h1 id="see-also">See also</h1>
+<p>A more up to date version of this page may be available at <a href="https://lupan.pl/">lupan.pl</a>.</p>
+
+</div>
 </body>
 </html>
