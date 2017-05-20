@@ -102,9 +102,9 @@ then the go compiler)</li>
 (suggested on <a href="https://golang.org/doc/">Go documentation</a> page)</li>
 <li><a href="https://tour.golang.org">A Tour of Go</a> – interactive tutorial which allows you to edit compile and run examples in the browser</li>
 <li><a href="https://golang.org/doc/code.html">How to Write Go Code</a></li>
-<li><a href="https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins">IDEs and Plugins for Go</a>. Examples:
-open source <a href="https://github.com/visualfc/liteide">LiteIDE</a>,
-<a href="http://lupan.ddns.net/#using-go-under-emacs">using Go under Emacs</a>.</li>
+<li><a href="https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins">IDEs and Plugins for Go</a>. Examples (open source):
+<a href="#using-go-under-emacs">using Go under Emacs</a>,
+<a href="https://atom.io/packages/go-plus">go-plus package for Atom editor</a>, <a href="https://github.com/visualfc/liteide">LiteIDE</a>.</li>
 </ul>
 <p>Videos (with links to slides)</p>
 <ul>
@@ -120,9 +120,10 @@ open source <a href="https://github.com/visualfc/liteide">LiteIDE</a>,
 [<a href="http://talks.golang.org/2013/advconc.slide">slides</a>]
 (suggested on <a href="https://golang.org/doc/">Go documentation</a> page)</li>
 <li><a href="https://www.youtube.com/watch?v=LJvEIjRBSDA">Write in Go (Fall 2014)</a></li>
-<li><a href="https://www.youtube.com/watch?v=0ReKdcpNyQg">GopherCon 2015 – Robert Griesemer - The Evolution of Go</a>
+<li><a href="https://www.youtube.com/watch?v=0ReKdcpNyQg">GopherCon 2015 – Robert Griesemer – The Evolution of Go</a>
 [<a href="http://talks.golang.org/2015/gophercon-goevolution.slide">slides</a>] – one of three original authors of Go</li>
-<li><a href="https://www.youtube.com/watch?v=8D3Vmm1BGoY">Twelve Go Best Practices - Francesc Campoy</a>
+<li><a href="https://www.youtube.com/watch?v=8D3Vmm1BGoY">Francesc Campoy – Twelve Go Best Practices</a> [<a href="https://talks.golang.org/2013/bestpractices.slide">slides</a>]</li>
+<li><a href="https://golangnews.com/stories/1012-video-understanding-nil-gophercon">GopherCon 2016 – Francesc Campoy – Understanding nil</a> [<a href="https://speakerdeck.com/campoy/understanding-nil">slides</a>]
 [<a href="http://talks.golang.org/2013/bestpractices.slide">slides</a>]</li>
 <li><a href="https://www.youtube.com/watch?v=ndmB0bj7eyw">golang-syd in July 2014 – Andrew Gerrand – Testing techniques</a>
 [<a href="https://talks.golang.org/2014/testing.slide">slides</a>]</li>
@@ -130,6 +131,7 @@ open source <a href="https://github.com/visualfc/liteide">LiteIDE</a>,
 [<a href="https://rcrowley.org/talks/gophercon-2014.html">slides</a>]</li>
 <li><a href="https://www.youtube.com/watch?v=4Dr8FXs9aJM">Gophercon India 2016 – Brad Fitzpatrick – Introducing Go 1.6: asymptotically approaching boring</a>
 [<a href="https://docs.google.com/presentation/d/1JsCKdK_AvDdn8EkummMNvpo7ntqteWQfynq9hFTCkhQ/view?pref=2&amp;pli=1#slide=id.p">slides</a>]</li>
+<li><a href="https://golangnews.com/stories/2037-video-filippo-valsorda-fighting-latency-the-cpu-profiler-is-not-your-ally-gopherconindia">Gophercon India 2017 – Filippo Valsorda – Fighting latency: the CPU profiler is not your ally</a> [<a href="https://speakerdeck.com/filosottile/you-latency-and-profiling-at-gophercon-india-2017">slides</a>]</li>
 </ul>
 <p>Articles</p>
 <ul>
@@ -153,7 +155,7 @@ open source <a href="https://github.com/visualfc/liteide">LiteIDE</a>,
 <p>You can install many Emacs packages from <a href="https://melpa.org">MELPA</a>
 repository. To add MELPA to the package list add the following to your
 <code>~/.emacs</code> file</p>
-    <pre>
+<pre>
 (<span class="keyword">require</span> '<span class="constant">package</span>)
 (<span class="keyword">setq</span> package-archives
       '((<span class="string">"gnu"</span> . <span class="string">"https://elpa.gnu.org/packages/"</span>)
@@ -162,6 +164,7 @@ repository. To add MELPA to the package list add the following to your
       tls-program '(<span class="string">"gnutls-cli --x509cafile %t -p %p %h"</span>)
       gnutls-verify-error t)
 </pre>
+
 <p>This also turns on checking TLS certificates (in both possible modes)
 with <code>tls-program</code> set to only the first value from the default value
 (for more info
@@ -207,7 +210,7 @@ either completes the symbol at point or indents the line, the other one
 (<code>my-go-electric-brace</code>) is bind to <code>{</code> key and inserts an indented
 pair of braces (if previous character is a space, otherwise it inserts
 single opening brace).</p>
-    <pre>
+<pre>
 (<span class="keyword">setq</span> gofmt-command <span class="string">"goimports"</span>     <span class="comment-delimiter">; </span><span class="comment">use goimports instead of gofmt
 </span>      go-fontify-function-calls nil <span class="comment-delimiter">; </span><span class="comment">fontifing names of called functions is too much for me
 </span>      company-idle-delay nil)
@@ -249,6 +252,7 @@ single opening brace).</p>
 
 (add-hook 'go-mode-hook 'my-go-mode-hook-fn)
 </pre>
+
 <p>Now, in go buffers you can use <code>C-c C-j</code> (or <code>M-.</code>) to jump to the
 definition of the identifier at point (use <code>M-*</code> to jump back as for
 normal tags) and you can also use <code>C-c C-d</code> for a short description of
@@ -263,7 +267,7 @@ packages: <a href="https://github.com/dominikh/go-mode.el">go-mode</a>, <a href=
 </li>
 <li>
 <p>Install Go compiler. Under Debian you install <code>golang-go</code> package
-(but in Debian 8 Jessie it is 1.3.3 compared to the current 1.7.3,
+(but in Debian 8 Jessie it is 1.3.3 compared to the current 1.8.1,
 so you may consider
 <a href="https://golang.org/dl/">downloading the current version of Go</a>). Otherwise
 search for the package for your system or otherwise see
@@ -304,7 +308,7 @@ for more info.</p>
 <h2 id="using-python-under-emacs">Using Python under Emacs</h2>
 <p>Install <a href="https://melpa.org/#/company-jedi">company-jedi</a> from MELPA.
 Add the following to your <code>~/.emacs</code> file:</p>
-    <pre>
+<pre>
 (<span class="keyword">defun</span> <span class="function-name">my-python-mode-hook-fn</span> ()
   (jedi:setup)
   (set (make-local-variable 'company-backends) '(company-jedi))
@@ -316,6 +320,7 @@ Add the following to your <code>~/.emacs</code> file:</p>
 
 (add-hook 'python-mode-hook 'my-python-mode-hook-fn)
 </pre>
+
 <p>Function <code>my-indent-or-complete</code> is defined above in section
 <a href="#using-go-under-emacs">Using Go under Emacs</a>.</p>
 <h2 id="using-cc-under-emacs">Using C/C++ under Emacs</h2>
@@ -331,7 +336,7 @@ and <code>rtags</code>) when you open a C/C++ file from a project which uses
 </li>
 <li>
 <p>Add the following to your <code>~/.emacs</code> file.</p>
-    <pre>
+<pre>
 (set-default 'c-basic-offset 8)
 (<span class="keyword">setq</span> c-default-style '((java-mode . <span class="string">"java"</span>)
                         (awk-mode . <span class="string">"awk"</span>)
@@ -357,6 +362,7 @@ and <code>rtags</code>) when you open a C/C++ file from a project which uses
 (add-hook 'c-mode-hook 'my-c-c++-mode-hook-fn)
 (add-hook 'c++-mode-hook 'my-c-c++-mode-hook-fn)
 </pre>
+
 <p>Function <code>my-indent-or-complete</code> is defined above in section
 <a href="#using-go-under-emacs">Using Go under Emacs</a>.</p>
 </li>

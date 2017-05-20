@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Inconsolata|Merriweather:300|Titillium+Web:600';
+@import 'https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Mono';
 
 @media screen {
     body {
@@ -19,7 +19,8 @@
 
 body {
     background-color: #ffffff;
-    font-family: "Merriweather", serif;
+    font-family: "Roboto", serif;
+    line-height: 1.4;
 }
 
 nav {
@@ -45,15 +46,19 @@ nav a:hover {
 }
 
 h1 {
-    font-family: "Titillium Web", "DejaVu Serif Condensed", sans-serif;
-    font-size: 200%;
-    font-weight: bold;
+    font-family: "Roboto Condensed", "DejaVu Serif Condensed", sans-serif;
+    font-size: 250%;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
 }
 
 h2 {
-    font-family: "Titillium Web", "DejaVu Serif Condensed", sans-serif;
-    font-size: 150%;
-    font-weight: bold;
+    font-family: "Roboto Condensed", "DejaVu Serif Condensed", sans-serif;
+    font-size: 200%;
+    font-weight: 300;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
 }
 
 table {
@@ -74,24 +79,25 @@ th {
 }
 
 code {
-    font-family: "Inconsolata", monospace;
-    color: #585858;
+    font-family: "Roboto Mono", monospace;
 }
 
 :not(pre) > code {
-    color: #333333;
+    color: #546e7a;
+    background-color: #fafafa;
     border: solid 1px #e0e0e0;
     border-radius: 5px;
-    padding: 2px 3px 2px 3px;
+    padding: 0px 3px 0px 3px;
 }
 
 pre {
-    color: #333333;
+    color: #546e7a;
+    background-color: #fafafa;
     border: solid 1px #e0e0e0;
     border-radius: 5px;
     padding: 10px;
     margin: 1em;
-    font-family: Inconsolata, monospace;
+    font-family: "Roboto Mono", monospace;
 }
 
 
@@ -100,48 +106,44 @@ pre {
    exported to CSS using htmlize (http://melpa.org/#/htmlize) 
 */
 
+
 .builtin {
     /* font-lock-builtin-face */
-    color: #006FE0;
+    color: #0097A7;
 }
 .comment {
     /* font-lock-comment-face */
-    color: #8D8D84;
-    font-style: italic;
+    color: #90A4AE;
 }
 .comment-delimiter {
     /* font-lock-comment-delimiter-face */
-    color: #8D8D84;
+    color: #90A4AE;
 }
 .constant {
     /* font-lock-constant-face */
-    color: #D0372D;
-}
+    color: #5C6BC0;
+      }
 .doc {
     /* font-lock-doc-face */
-    color: #036A07;
+    color: #78909C;
 }
 .function-name {
     /* font-lock-function-name-face */
-    color: #006699;
+    color: #42A5F5;
 }
 .keyword {
     /* font-lock-keyword-face */
-    color: #0000FF;
+    color: #7E57C2;
 }
-.regexp-grouping-backslash {
-    /* font-lock-regexp-grouping-backslash */
-    font-weight: bold;
-}
-.regexp-grouping-construct {
-    /* font-lock-regexp-grouping-construct */
-    font-weight: bold;
+.negation-char {
+    /* font-lock-negation-char-face */
+    color: #FF1744;
 }
 .string {
     /* font-lock-string-face */
-    color: #008000;
+    color: #66BB6A;
 }
 .type {
     /* font-lock-type-face */
-    color: #6434A3;
+    color: #D84315;
 }
